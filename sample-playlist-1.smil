@@ -2,11 +2,7 @@
   <head>
     <layout>
       <root-layout width="1920" height="1080" />
-			<region regionName="topOverlay" left="0" top="0" width="1920" height="68" z-index="9" backgroundColor="transparent" />
-			<region regionName="video" left="0" top="0" width="1280" height="720" z-index="1"/>
-			<region regionName="bottomWidget" left="0" bottom="0" width="1280" height="360" z-index="1"/>
-			<region regionName="topRightWidget" left="1280" top="0" width="640" height="506" z-index="1"/>
-			<region regionName="bottomRightWidget" left="1280" top="506" width="640" height="574" z-index="1"/>
+		<region regionName="video" left="0" top="0" width="1920" height="1080" z-index="1"/>
     </layout>
   </head>
   <body>
