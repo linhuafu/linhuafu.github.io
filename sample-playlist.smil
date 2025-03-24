@@ -14,20 +14,20 @@
 
 			<seq end="__prefetchEnd.endEvent">
 				<seq repeatCount="indefinite">
-					<video src="https://drive.google.com/file/d/1UNK_gIzLi25qSUDGDVSdCpZyRuSAIFnY/view?usp=drive_link" />
+					<video src="https://linhuafu.github.io/Screen_1.mp4" />
 				</seq>
       </seq>
 
       <par begin="__prefetchEnd.endEvent" repeatCount="indefinite">
         <par>
           <seq repeatCount="indefinite">
-            <ref src="https://signageos-demo.s3.eu-central-1.amazonaws.com/smil/zones/files/topOverlay.wgt" type="application/widget" region="topOverlay" dur="60s"></ref>
+            <ref src="https://demo.signageos.io/smil/zones/files/topOverlay.wgt" type="application/widget" region="topOverlay" dur="60s"></ref>
           </seq>
         </par>
 
         <par>
           <seq repeatCount="indefinite">
-            <ref src="https://signageos-demo.s3.eu-central-1.amazonaws.com/smil/zones/files/bottomWidget.wgt" type="application/widget" region="bottomWidget" dur="60s"></ref>
+            <ref src="https://demo.signageos.io/smil/zones/files/bottomWidget.wgt" type="application/widget" region="bottomWidget" dur="60s"></ref>
           </seq>
         </par>
 
@@ -36,17 +36,17 @@
             <!-- 
               - expr defines a condition, if the condition is met, the item (in this case image) is played, otherwise is skipped
             -->
-            <img expr="adapi-weekday()=0" src="https://drive.google.com/file/d/1lYAim1SttJFzaMG3Cz33SeDRLOGYoScp/view?usp=drive_link" region="topRightWidget" dur="60s"></img>
-            <img expr="adapi-weekday()>=1 and adapi-weekday()<=5" src="https://drive.google.com/file/d/120S_YA8KIQYyM2hAqRqGl1ZuA5J_DjhU/view?usp=drive_link" region="topRightWidget" dur="60s"></img>
-            <img expr="adapi-weekday()=6" src="https://drive.google.com/file/d/1TknQKwoMEU0fI_Zt_SpQpyR_Rg7JwQTt/view?usp=drive_link" region="topRightWidget" dur="60s"></img>
+            <img expr="adapi-weekday()=0" src="https://linhuafu.github.io/logo.png" region="topRightWidget" dur="60s"></img>
+            <img expr="adapi-weekday()>=1 and adapi-weekday()<=5" src="https://linhuafu.github.io/image_4.jpg" region="topRightWidget" dur="60s"></img>
+            <img expr="adapi-weekday()=6" src="https://linhuafu.github.io/Screen_3.mp4" region="topRightWidget" dur="60s"></img>
           </seq>
         </par>
 
         <par>
           <seq repeatCount="indefinite">
-            <img src="https://drive.google.com/file/d/1HYvXiPJSTJgCc6zBXPbhhM5P7nw25DyY/view?usp=drive_link" region="bottomRightWidget" dur="60s"></img>
-            <img src="https://drive.google.com/file/d/1xpGoJertDkukjPjyXng08bgZOlXICJHp/view?usp=drive_link" region="bottomRightWidget" dur="60s"></img>
-            <img src="https://drive.google.com/file/d/1zujI5MackMTFbcGuNci7DcLzQbvmoGrq/view?usp=drive_link" region="bottomRightWidget" dur="60s"></img>
+            <img src="https://linhuafu.github.io/image_3.jpg" region="bottomRightWidget" dur="60s"></img>
+            <img src="https://linhuafu.github.io/image_2.png" region="bottomRightWidget" dur="60s"></img>
+            <img src="https://linhuafu.github.io/image_1.png" region="bottomRightWidget" dur="60s"></img>
           </seq>
         </par>
 
@@ -55,8 +55,8 @@
             <priorityClass higher="stop" lower="defer" peer="stop">
               <par begin="wallclock(2025-06-30T00:00:00)" end="wallclock(2021-07-31T00:00:00)">
                 <seq repeatCount="indefinite">
-                    <video src="https://drive.google.com/file/d/1qjlmdSwh_aY4YyznDqzNPlBnQTbrnqv9/view?usp=drive_link" region="video"></video>
-                    <img src="https://drive.google.com/file/d/120S_YA8KIQYyM2hAqRqGl1ZuA5J_DjhU/view?usp=drive_link" dur="5s" region="video"></img>
+                    <video src="https://linhuafu.github.io/Screen_4.mp4" region="video"></video>
+                    <img src="https://linhuafu.github.io/image_4.jpg" dur="5s" region="video"></img>
                   </seq>
               </par>
             </priorityClass>
@@ -64,10 +64,10 @@
             <priorityClass higher="stop" lower="defer" peer="stop">
               <par>
                 <seq repeatCount="indefinite" begin="0">
-                    <video src="https://drive.google.com/file/d/1UNK_gIzLi25qSUDGDVSdCpZyRuSAIFnY/view?usp=drive_link" region="video"></video>
-                    <video src="https://drive.google.com/file/d/1TknQKwoMEU0fI_Zt_SpQpyR_Rg7JwQTt/view?usp=drive_link" region="video"></video>
-                    <img src="https://drive.google.com/file/d/1zujI5MackMTFbcGuNci7DcLzQbvmoGrq/view?usp=drive_link" dur="5s" region="video"></img>
-                    <img src="https://drive.google.com/file/d/1xpGoJertDkukjPjyXng08bgZOlXICJHp/view?usp=drive_link" dur="5s" region="video"></img>
+                    <video src="https://linhuafu.github.io/Screen_1.mp4" region="video"></video>
+                    <video src="https://linhuafu.github.io/Screen_3.mp4" region="video"></video>
+                    <img src="https://linhuafu.github.io/image_1.png" dur="5s" region="video"></img>
+                    <img src="https://linhuafu.github.io/image_2.png" dur="5s" region="video"></img>
                 </seq>
               </par>
             </priorityClass>
