@@ -1,0 +1,79 @@
+<smil>
+  <head>
+    <layout>
+      <root-layout width="1920" height="1080" />
+			<region regionName="topOverlay" left="0" top="0" width="1920" height="68" z-index="9" backgroundColor="transparent" />
+			<region regionName="video" left="0" top="0" width="1280" height="720" z-index="1"/>
+			<region regionName="bottomWidget" left="0" bottom="0" width="1280" height="360" z-index="1"/>
+			<region regionName="topRightWidget" left="1280" top="0" width="640" height="506" z-index="1"/>
+			<region regionName="bottomRightWidget" left="1280" top="506" width="640" height="574" z-index="1"/>
+    </layout>
+  </head>
+  <body>
+    <par>
+
+			<seq end="__prefetchEnd.endEvent">
+				<seq repeatCount="indefinite">
+					<video src="https://drive.google.com/file/d/1UNK_gIzLi25qSUDGDVSdCpZyRuSAIFnY/view?usp=drive_link" />
+				</seq>
+      </seq>
+
+      <par begin="__prefetchEnd.endEvent" repeatCount="indefinite">
+        <par>
+          <seq repeatCount="indefinite">
+            <ref src="https://signageos-demo.s3.eu-central-1.amazonaws.com/smil/zones/files/topOverlay.wgt" type="application/widget" region="topOverlay" dur="60s"></ref>
+          </seq>
+        </par>
+
+        <par>
+          <seq repeatCount="indefinite">
+            <ref src="https://signageos-demo.s3.eu-central-1.amazonaws.com/smil/zones/files/bottomWidget.wgt" type="application/widget" region="bottomWidget" dur="60s"></ref>
+          </seq>
+        </par>
+
+        <par>
+          <seq repeatCount="indefinite">
+            <!-- 
+              - expr defines a condition, if the condition is met, the item (in this case image) is played, otherwise is skipped
+            -->
+            <img expr="adapi-weekday()=0" src="https://drive.google.com/file/d/1lYAim1SttJFzaMG3Cz33SeDRLOGYoScp/view?usp=drive_link" region="topRightWidget" dur="60s"></img>
+            <img expr="adapi-weekday()>=1 and adapi-weekday()<=5" src="https://drive.google.com/file/d/120S_YA8KIQYyM2hAqRqGl1ZuA5J_DjhU/view?usp=drive_link" region="topRightWidget" dur="60s"></img>
+            <img expr="adapi-weekday()=6" src="https://drive.google.com/file/d/1TknQKwoMEU0fI_Zt_SpQpyR_Rg7JwQTt/view?usp=drive_link" region="topRightWidget" dur="60s"></img>
+          </seq>
+        </par>
+
+        <par>
+          <seq repeatCount="indefinite">
+            <img src="https://drive.google.com/file/d/1HYvXiPJSTJgCc6zBXPbhhM5P7nw25DyY/view?usp=drive_link" region="bottomRightWidget" dur="60s"></img>
+            <img src="https://drive.google.com/file/d/1xpGoJertDkukjPjyXng08bgZOlXICJHp/view?usp=drive_link" region="bottomRightWidget" dur="60s"></img>
+            <img src="https://drive.google.com/file/d/1zujI5MackMTFbcGuNci7DcLzQbvmoGrq/view?usp=drive_link" region="bottomRightWidget" dur="60s"></img>
+          </seq>
+        </par>
+
+        <par>
+          <excl>
+            <priorityClass higher="stop" lower="defer" peer="stop">
+              <par begin="wallclock(2025-06-30T00:00:00)" end="wallclock(2021-07-31T00:00:00)">
+                <seq repeatCount="indefinite">
+                    <video src="https://drive.google.com/file/d/1qjlmdSwh_aY4YyznDqzNPlBnQTbrnqv9/view?usp=drive_link" region="video"></video>
+                    <img src="https://drive.google.com/file/d/120S_YA8KIQYyM2hAqRqGl1ZuA5J_DjhU/view?usp=drive_link" dur="5s" region="video"></img>
+                  </seq>
+              </par>
+            </priorityClass>
+
+            <priorityClass higher="stop" lower="defer" peer="stop">
+              <par>
+                <seq repeatCount="indefinite" begin="0">
+                    <video src="https://drive.google.com/file/d/1UNK_gIzLi25qSUDGDVSdCpZyRuSAIFnY/view?usp=drive_link" region="video"></video>
+                    <video src="https://drive.google.com/file/d/1TknQKwoMEU0fI_Zt_SpQpyR_Rg7JwQTt/view?usp=drive_link" region="video"></video>
+                    <img src="https://drive.google.com/file/d/1zujI5MackMTFbcGuNci7DcLzQbvmoGrq/view?usp=drive_link" dur="5s" region="video"></img>
+                    <img src="https://drive.google.com/file/d/1xpGoJertDkukjPjyXng08bgZOlXICJHp/view?usp=drive_link" dur="5s" region="video"></img>
+                </seq>
+              </par>
+            </priorityClass>
+          </excl>
+        </par>
+      </par>
+    </par>
+  </body>
+</smil>
