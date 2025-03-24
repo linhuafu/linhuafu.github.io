@@ -1,0 +1,33 @@
+<smil>
+  <head>
+    <layout>
+      <root-layout width="1920" height="1080" />
+		<region regionName="video" left="0" top="0" width="1920" height="1080" z-index="1"/>
+    </layout>
+  </head>
+  <body>
+    <par>
+	
+	   <seq end="__prefetchEnd.endEvent">
+		<seq repeatCount="indefinite">
+			<img src="https://linhuafu.github.io/logo.png" />
+		</seq>
+      </seq>
+
+      <par begin="__prefetchEnd.endEvent" repeatCount="indefinite">
+          <seq repeatCount="indefinite">
+		    <img src="https://linhuafu.github.io/image_4.jpg" region="video" dur="5s"></img>
+            <img src="https://linhuafu.github.io/image_3.jpg" region="video" dur="5s"></img>
+            <img src="https://linhuafu.github.io/image_2.png" region="video" dur="5s"></img>
+            <img src="https://linhuafu.github.io/image_1.png" region="video" dur="5s"></img>
+			<video src="https://linhuafu.github.io/Screen_1.mp4" region="video"></video>
+			<video src="https://linhuafu.github.io/Screen_2.mp4" region="video"></video>
+			<video src="https://linhuafu.github.io/Screen_3.mp4" region="video"></video>
+			<video src="https://linhuafu.github.io/Screen_4.mp4" region="video"></video>
+			<video src="https://linhuafu.github.io/Screen_5.mp4" region="video"></video>
+          </seq>
+      </par>
+	  
+    </par>
+  </body>
+</smil>
